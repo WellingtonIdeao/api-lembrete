@@ -16,4 +16,10 @@ class Lembrete(models.Model):
     criado = models.DateTimeField(auto_now_add=True)
     modificado = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        ordering = ('-criado',)
+
+    def __str__(self):
+        return self.conteudo
+
 
