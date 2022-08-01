@@ -13,5 +13,7 @@ class Lembrete(models.Model):
     arquivado = models.BooleanField(default=False)
     prioridade = models.CharField(max_length=5, choices=PrioridadeChoices.choices,
                                   default=PrioridadeChoices.BAIXA)
-    modificado = models.IntegerField()
+    criado = models.DateTimeField(auto_now_add=True)
+    modificado = models.DateTimeField(auto_now=True)
+
 
